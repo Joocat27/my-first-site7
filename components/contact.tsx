@@ -38,7 +38,7 @@ export function Contact() {
     title: "",
     company: "",
     experience: "",
-    phone: "",
+    phone: "010-2979-5585 // 1-213-247-5525",
     email: "hivytv@gmail.com",
     website: "",
     location: "",
@@ -48,9 +48,9 @@ export function Contact() {
     sectionSubtitle: "프로젝트 문의나 협업 제안을 기다리고 있습니다. 편하신 방법으로 연락주세요!",
     qrTitle: "QR 코드로 연락처 저장",
     qrSubtitle: "스캔하면 연락처가 자동으로 저장됩니다",
-    bottomMessage: "함께 성장하는 파트너가 되겠습니다.",
-    bottomSubMessage: "고객님의 성공적인 프로젝트를 위해 최선을 다하겠습니다.",
-    qrContent: ["name","email"],
+    bottomMessage: "미국 이민생활의 궁금함 풀어드려요^^",
+    bottomSubMessage: "텍스트 마이닝을 통한 사회연결망",
+    qrContent: ["name","email","phone"],
     profileEmoji: "",
     background: {"image":"","video":"","color":"","opacity":0.1}
   }
