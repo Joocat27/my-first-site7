@@ -1,111 +1,16 @@
 "use client"
 
-import * as React from "react"
-import { useState, useEffect } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Briefcase, GraduationCap, Award, Heart, Coffee, Book, Plus, X, Settings, Calendar, Building, User, Trophy, Star, Lightbulb, Target, Rocket, Shield, Sparkles, Code, Database, Palette, Megaphone, BarChart3, LineChart, PieChart, Activity, Brain, Cpu, Layers, Package, Server, Smartphone, Monitor, Wifi, Cloud, Lock, Key, Eye, Search, Filter, Edit, FileText, FolderOpen, GitBranch, Hash, Inbox, Send, MessageSquare, Music, Camera, Video, Mic, Volume2, Headphones, Radio, Zap, Globe, Users, TrendingUp, BookOpen, MapPin, Clock, CheckCircle, AlertCircle, Home, School } from "lucide-react"
-import { EditableText } from "@/components/editable/editable-text"
-import { EditableMedia } from "@/components/editable/editable-media"
-import { EditableBackground } from "@/components/editable/editable-background"
-import { useInlineEditor } from "@/contexts/inline-editor-context"
-import { COMMON_STYLES } from "@/lib/constants"
-
-// 사용 가능한 아이콘들 - 경험 카드용
-const AVAILABLE_ICONS = {
-  briefcase: Briefcase,
-  graduation: GraduationCap,
-  award: Award,
-  trophy: Trophy,
-  star: Star,
-  lightbulb: Lightbulb,
-  target: Target,
-  rocket: Rocket,
-  shield: Shield,
-  building: Building,
-  calendar: Calendar,
-  book: Book,
-  heart: Heart,
-  coffee: Coffee,
-  user: User,
-  zap: Zap,
-  globe: Globe,
-  users: Users,
-  trending: TrendingUp,
-  bookOpen: BookOpen,
-  mapPin: MapPin,
-  clock: Clock,
-  check: CheckCircle,
-  alert: AlertCircle,
-  home: Home,
-  school: School,
-}
-
-// 사용 가능한 아이콘들 - 스킬용
-const SKILL_ICONS = {
-  trophy: Trophy,
-  sparkles: Sparkles,
-  target: Target,
-  rocket: Rocket,
-  star: Star,
-  zap: Zap,
-  lightbulb: Lightbulb,
-  brain: Brain,
-  code: Code,
-  database: Database,
-  palette: Palette,
-  megaphone: Megaphone,
-  barChart: BarChart3,
-  lineChart: LineChart,
-  pieChart: PieChart,
-  activity: Activity,
-  cpu: Cpu,
-  layers: Layers,
-  package: Package,
-  server: Server,
-  smartphone: Smartphone,
-  monitor: Monitor,
-  wifi: Wifi,
-  cloud: Cloud,
-  lock: Lock,
-  key: Key,
-  eye: Eye,
-  search: Search,
-  filter: Filter,
-  edit: Edit,
-  fileText: FileText,
-  folderOpen: FolderOpen,
-  gitBranch: GitBranch,
-  hash: Hash,
-  inbox: Inbox,
-  send: Send,
-  messageSquare: MessageSquare,
-  music: Music,
-  camera: Camera,
-  video: Video,
-  mic: Mic,
-  volume: Volume2,
-  headphones: Headphones,
-  radio: Radio,
-  heart: Heart,
-  shield: Shield,
-  globe: Globe,
-  users: Users,
-}
+import React from "react"
 
 export function About() {
   return (
     <section id="about" className="py-20 bg-gray-50 text-center">
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4 text-gray-800">About Me</h2>
-        <p className="text-gray-600 text-lg leading-relaxed">
-          Hello, I'm a real estate and urban development researcher exploring how
-          people's perceptions of parks shape urban experience and value. This site
-          showcases my projects and interests in text mining, data visualization, and
-          city storytelling.
-        </p>
+        {/* 불필요한 안내 문구 삭제 */}
       </div>
     </section>
-  );
+  )
 }
 
 
@@ -145,16 +50,7 @@ export function About() {
     const newCards = [...aboutInfo.experienceCards]
     newCards[index] = { ...newCards[index], [field]: value }
     updateAboutInfo('experienceCards', newCards)
-  }
   
-  const addExperienceCard = () => {
-    updateAboutInfo('experienceCards', [...aboutInfo.experienceCards, { 
-      icon: "briefcase", 
-      title: "새 경험", 
-      period: "2024", 
-      description: "설명을 입력하세요" 
-    }])
-  }
   
   const removeExperienceCard = (index: number) => {
     updateAboutInfo('experienceCards', aboutInfo.experienceCards.filter((_, i) => i !== index))
